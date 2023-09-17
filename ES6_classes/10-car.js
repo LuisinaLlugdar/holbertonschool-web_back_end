@@ -11,24 +11,9 @@ object of the class.
 */
 export default class Car {
   constructor(brand, motor, color) {
-    if (typeof brand !== 'string' || typeof motor !== 'string' || typeof color !== 'string') {
-      throw new Error('Attributes must be strings');
-    }
     this._brand = brand;
     this._motor = motor;
     this._color = color;
-  }
-
-  get brand() {
-    return this._brand;
-  }
-
-  get motor() {
-    return this._motor;
-  }
-
-  get color() {
-    return this._color;
   }
 
   cloneCar() {
