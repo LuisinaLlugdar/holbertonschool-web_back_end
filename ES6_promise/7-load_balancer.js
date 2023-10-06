@@ -1,0 +1,13 @@
+/*
+Write and export a function named loadBalancer.
+It should accept two arguments:
+  -chinaDownload (Promise)
+  -USDownload (Promise).
+The function should return the value returned by the
+promise that resolved the first.
+*/
+function loadBalancer(chinaDownload, USDownload) {
+  return Promise.race([chinaDownload, USDownload]);
+}
+
+export default loadBalancer;
